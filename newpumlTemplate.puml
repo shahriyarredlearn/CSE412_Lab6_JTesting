@@ -1,0 +1,35 @@
+@startuml
+@enduml
++------------------+
+|     User         |
++------------------+
+| - name: String   |
+| - email: String  |
+| - expenses: List<Expense> |
++------------------+
+| +addExpense(e: Expense): void |
+| +getTotalExpenses(): double   |
++------------------+
+
++----------------------+
+|     Expense          |
++----------------------+
+| - title: String      |
+| - amount: double     |
+| - date: LocalDate    |
+| - category: Category |
+| - paymentMethod: PaymentMethod |
++----------------------+
+
++--------------------+
+|    Category        |
++--------------------+
+| - name: String     |
+| - description: String |
++--------------------+
+
++----------------------+
+|  PaymentMethod       |
++----------------------+
+| - methodName: String |
++----------------------+
